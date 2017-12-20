@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HW_SYN_LAB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7pL-3c-Wn1">
+                                <rect key="frame" x="0.0" y="116" width="375" height="467"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" red="0.98823529409999999" green="0.8980392157" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7s-eH-Py8">
+                                <rect key="frame" x="0.0" y="610" width="375" height="30"/>
+                                <state key="normal" title="Clear Record"/>
+                                <connections>
+                                    <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eqy-I2-nj4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STM32 LIFESAVER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovE-ER-o5k">
+                                <rect key="frame" x="0.0" y="47" width="375" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="j2Z-N7-Y8S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ovE-ER-o5k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CcQ-dg-huw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="c7s-eH-Py8" secondAttribute="bottom" constant="27" id="D2v-mZ-Thr"/>
+                            <constraint firstItem="7pL-3c-Wn1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KuM-UG-96B"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ovE-ER-o5k" secondAttribute="trailing" id="LC1-b3-Fcc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="c7s-eH-Py8" secondAttribute="trailing" id="Ngc-VZ-Rkb"/>
+                            <constraint firstItem="7pL-3c-Wn1" firstAttribute="top" secondItem="ovE-ER-o5k" secondAttribute="bottom" constant="27" id="OKP-zm-urc"/>
+                            <constraint firstItem="c7s-eH-Py8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TDa-hC-weB"/>
+                            <constraint firstItem="c7s-eH-Py8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aHK-8W-kEG"/>
+                            <constraint firstItem="ovE-ER-o5k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bQs-LN-MPD"/>
+                            <constraint firstItem="ovE-ER-o5k" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="27" id="di2-9o-9ea"/>
+                            <constraint firstItem="c7s-eH-Py8" firstAttribute="top" secondItem="7pL-3c-Wn1" secondAttribute="bottom" constant="27" id="uci-8G-h1a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7pL-3c-Wn1" secondAttribute="trailing" id="yb2-KE-bsm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="7pL-3c-Wn1" id="Ry2-Cj-9jm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="92" y="106.59670164917542"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,6 @@
+framework module Pods_HW_SYN_LABUITests {
+  umbrella header "Pods-HW_SYN_LABUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
