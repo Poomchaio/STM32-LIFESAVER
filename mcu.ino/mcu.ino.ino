@@ -87,7 +87,7 @@ void loop() {
         Serial.println("state");
         Serial.println(state);
         if(data == 1 && state == 0){
-          microgear.chat(ALIAS,1);
+          microgear.chat("WEB","I am FINE");
           Serial.println( "SEND 1 TO SERVER");
           HTTPClient http;    
           http.begin("http://172.20.10.5:3000/send/basic");
@@ -102,7 +102,7 @@ void loop() {
           state = 1;
           Serial.println( "SEND 1 TO POST");
         }else if(data2 == 1 && state == 1){
-          microgear.chat(ALIAS,0);
+          microgear.chat("WEB","FALLEN");
           Serial.println( "SEND 1 TO SERVER");
           HTTPClient http;    
           http.begin("http://172.20.10.5:3000/send/ok");
